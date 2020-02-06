@@ -19,27 +19,22 @@
     <div class="row">
       <div class="sidebar col-lg-2 col-md-2 col-sm-12">
         <!-- Search form -->
-        <input id="city-search" class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <form action="">
+          <p>
+            <input id='search-bar' class="form-control city-search" type="text" placeholder="Search" aria-label="Search">
+          </p>
+          <p>
+            <button type="button" id="search-btn" class="btn btn-primary city-search">Search</button>
+          </p>
+        </form><hr>
         <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action">Sampe City</a>
+          <a href="#" class="list-group-item list-group-item-action">Sample City</a>
         </div>
       </div>
       <div class="jumbotron col-lg-10 col-md-10 col-sm-12">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured
-          content or information.</p>
+        <div id="current-city-weather"></div>
         <hr class="my-4">
-        <div class="weather-cards col-lg-3">
-          <div class="card">
-            <div class="card-header">
-              Featured
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Special title treatment</h5>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+        <div id="weather-cards" class="weather-cards d-flex flex-row bd-highlight">
         </div>
       </div>
     </div>
@@ -47,7 +42,7 @@
 
 
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"

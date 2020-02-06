@@ -1,7 +1,19 @@
+h1 {
+  font-size: 18px;
+}
+
 input {
   margin-bottom: 2%;
 }
 
 .container-fluid {
   padding: 2%;
+}
+
+button {
+  margin-bottom: 2%;
+}
+
+.weather-cards {
+  margin: 1%;
 }
