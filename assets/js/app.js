@@ -19,7 +19,7 @@ const renderCitySidebar = _ => {
 document.getElementById('search-btn').addEventListener('click', event => {
   event.preventDefault()
 
-  fetch(`http://api.weatherapi.com/v1/forecast.json?key=1494b6e914a84eb4aeb215103200502&q=${document.getElementById('search-bar').value}&days=5`)
+  fetch(`https://api.weatherapi.com/v1/forecast.json?key=1494b6e914a84eb4aeb215103200502&q=${document.getElementById('search-bar').value}&days=5`)
   .then(r => r.json())
   .then(weather => {
     // City Weather Details
