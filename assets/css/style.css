@@ -15,5 +15,9 @@ button {
 }
 
 .weather-cards {
-  margin: 1%;
+  margin: 2%;
+}
+
+#city-history {
+  margin-bottom: 2%;
 }

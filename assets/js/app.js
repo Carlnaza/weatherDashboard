@@ -28,7 +28,7 @@ document.getElementById('search-btn').addEventListener('click', event => {
     cityWeather.className = ''
     cityWeather.id = ''
     cityWeather.innerHTML = `
-    <h1 class="font-weight-bold">${weather.location.name} - ${weather.location.localtime}</h1>
+    <h1 class="font-weight-bold">${weather.location.name} - ${moment(weather.location.localtime).format('MMM Do YYYY')}</h1>
     <p>Temparature: ${weather.current.temp_f}°</p>
     <p>Humidity: ${weather.current.humidity}</p>
     <p>Wind Speed: ${weather.current.wind_mph}</p>
@@ -40,12 +40,12 @@ document.getElementById('search-btn').addEventListener('click', event => {
     document.getElementById('weather-cards').innerHTML = ' '
     for (let i = 0; i < weather.forecast.forecastday.length; i++) {
       let weatherCard = document.createElement('div')
-      weatherCard.className = 'weather-cards col-lg-2 col-md-2 col-sm-6'
+      weatherCard.className = 'weather-cards col-lg-2 col-md-2 col-sm-12'
       weatherCard.id = 'weather-cards-rendered'
       weatherCard.innerHTML = `
       <div class="card">
       <div class="card-header">
-        ${weather.forecast.forecastday[i].date}
+        ${moment(weather.forecast.forecastday[i].date).format('MMM Do YYYY')}
       </div>
       <div class="card-body">
         <p>${weather.forecast.forecastday[i].day.condition.text}</p>
@@ -62,4 +62,4 @@ document.getElementById('search-btn').addEventListener('click', event => {
   .catch(e => console.error(e))
   renderCitySidebar()
 })
-renderCitySidebar()
+
